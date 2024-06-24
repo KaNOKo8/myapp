@@ -24,7 +24,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hello', helloRouter);
 // error handler
-app.user(function(req, res, next) {
+app.use(function(req, res, next) {
     next(createError(404));
 });
 
