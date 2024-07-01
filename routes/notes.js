@@ -4,8 +4,6 @@ var router = express.Router();
 const { MongoClient } = require("mongodb");
 const uri = "mongodb+srv://kanoko24:abcxxx@cluster0.u4922gb.mongodb.net/?retryWrites=true&w=majority&"
 
-
-
 const client = new MongoClient(uri);
 router.get('/', async (req, res) => {
 // データベース、コレクションを指定
