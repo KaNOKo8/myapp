@@ -7,6 +7,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var helloRouter = require('./routes/hello');
 var notesRouter = require('./routes/notes'); 
+var catRouter   = require('./routes/cat');
 
 var app = express();
 exports.app = app;
@@ -25,6 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hello', helloRouter);
 app.use('/notes', notesRouter);     
+app.use('/cat', catRouter);
 // error handler
 app.use(function(req, res, next) {
     next(createError(404));
